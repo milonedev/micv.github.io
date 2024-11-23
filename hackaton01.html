@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario html y css</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        /* border: 2px solid red; */
+        color: inherit;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+    }
+
+    a:hover {
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+        background-color: #000;
+        color: white;
+        box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        padding: 12px;
+        background-color: white;
+        z-index: 999999;
+    }
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero-section {
+        margin: 0;
+        padding: 0;
+        width: 98%;
+        height: 100vh;
+        border: 2px solid red;
+        background: #acb6e5;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #86fde8, #acb6e5);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        display: grid;
+        place-content: center;
+        position: relative;
+    }
+
+    .card {
+        width: 350px;
+        height: auto;
+        border-radius: 24px;
+        display: grid;
+        background-color: white;
+        padding: 20px 10px;
+        place-content: center;
+    }
+
+    .avatar {
+        width: 220px;
+        height: 220px;
+        border-radius: 1000%;
+        object-fit: cover;
+    }
+
+    .personal-info {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-wrap: nowrap;
+        /* border: 2px solid red; */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .links a {
+        text-decoration: none;
+        /* border: 2px solid red; */
+        color: inherit;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 6px;
+        font-weight: 800;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-bottom: 6px;
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+        background-color: #000;
+        color: white;
+        box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+
+    }
+
+    .links a:hover {
+
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+        background-color: white;
+        color: black;
+        box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 36px 47px 132px 9px rgba(0, 0, 0, 0.75);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .arrow-bottom {
+        position: absolute;
+        bottom: 60px;
+        left: 40%;
+        right: 40%;
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid red; */
+    }
+
+    .icon-bottom {
+        width: 60px;
+        height: 90px;
+        color: #000;
+    }
+
+    .icon-bottom:hover {
+        color: white;
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+        cursor: pointer;
+        scale: 1.5;
+    }
+
+    .my-works {
+        width: 98%;
+        height: 100px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grillas {
+        width: 80%;
+        display: grid;
+        height: auto;
+        border: 2px solid red;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 5px;
+    }
+
+    .img-ventor {
+        width: 100%;
+        height: 70px;
+        object-fit: cover;
+    }
+
+    .img-ventor-1 {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+    }
+
+    .item1 {
+        grid-column: 2;
+
+    }
+
+    .item2 {
+        grid-column: 3;
+    }
+
+    .item3 {
+        grid-column: 5;
+    }
+
+    .item4 {
+        grid-column: 6;
+    }
+
+    .item5 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .item7 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .item6 {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 2;
+        border: 2px solid red;
+    }
+
+
+    .item8 {
+        grid-column: 5 / span 2;
+        grid-row: 2 / span 2;
+        border: 2px solid red;
+    }
+
+    .item9 {
+        grid-column: 4;
+        grid-row: 2;
+        border: 2px solid blue;
+    }
+
+    .item10 {
+        grid-column: 4;
+        grid-row: 3;
+        border: 2px solid blue;
+    }
+
+    .item11 {
+        grid-column: 7;
+        grid-row: 2;
+        border: 2px solid blue;
+    }
+
+    .item12 {
+        grid-column: 7;
+        grid-row: 3;
+        border: 2px solid blue;
+    }
+
+    .item13 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2 / span 5;
+        grid-row: 4;
+        border: 2px solid blue;
+    }
+
+    .item14 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 3 / span 3;
+        grid-row: 5;
+        border: 2px solid blue;
+    }
+
+    .item15 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 4;
+        grid-row: 6;
+        border: 2px solid blue;
+    }
+</style>
+
+<body class="">
+    <!-- el encababezado de nuestra pagina web -->
+    <header>
+        <a href="/">
+            <svg class="logo" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7">
+                </path>
+            </svg>
+        </a>
+        <!-- sirve para navegar -->
+        <nav>
+            <a href="">Home</a>
+            <a href="">Sobre mi</a>
+            <a href="">Mis trabajos</a>
+        </nav>
+    </header>
+
+    <!-- el contenido de nuestra pagina  -->
+    <main class="hero-section">
+        <div class="card">
+            <img class="avatar"
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="">
+
+            <div class="container">
+                <div class="personal-info">
+                    <h2>Erick Millan</h2>
+                    <p>28 de edad</p>
+                </div>
+
+                <div class="links">
+                    <a target="_blank" href="https://github.com/milonedev"><i class="">G</i></a>
+                    <a href="#"><i class="">I</i></a>
+                    <a href="#"><i class="">W</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-bottom">
+            <svg class="icon-bottom" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 19V5m0 14-4-4m4 4 4-4" />
+            </svg>
+
+        </div>
+
+    </main>
+
+    <main class="my-works">
+        <h2>Mis trabajos</h2>
+
+        <div class="grillas">
+
+            <img class="img-ventor item1"
+                src="https://images.pexels.com/photos/29137971/pexels-photo-29137971/free-photo-of-scenic-autumn-pathway-lined-with-vibrant-leaves.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+                alt="">
+
+            <img class="img-ventor item2"
+                src="https://images.pexels.com/photos/2466778/pexels-photo-2466778.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                alt="">
+
+
+            <img class="img-ventor item3"
+                src="https://images.pexels.com/photos/25682795/pexels-photo-25682795/free-photo-of-back-view-of-a-woman-standing-in-a-foggy-forest-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                alt="">
+
+            <img class="img-ventor item4"
+                src="https://images.pexels.com/photos/29473242/pexels-photo-29473242/free-photo-of-bright-tulip-bouquet-in-natural-light.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                alt="">
+
+            <img class="img-ventor item5"
+                src="https://images.pexels.com/photos/20061413/pexels-photo-20061413/free-photo-of-young-woman-in-a-snowy-forest-with-smartphone-shooting-video-blog.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                alt="">
+            <img class="img-ventor item7"
+                src="https://images.pexels.com/photos/20061413/pexels-photo-20061413/free-photo-of-young-woman-in-a-snowy-forest-with-smartphone-shooting-video-blog.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                alt="">
+
+            <div class="item6" alt="">
+                <img class="img-ventor-1" src="https://images.pexels.com/photos/12902862/pexels-photo-12902862.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="">
+            </div>
+
+            <div class="item8" alt="">
+                <img class="img-ventor-1" src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="">
+            </div>
+
+            <div class="item9" alt="">
+                <img class="img-ventor" src="https://images.pexels.com/photos/29401471/pexels-photo-29401471/free-photo-of-cozy-vintage-cafe-corner-with-artistic-flair.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="">
+            </div>
+
+            <div class="item10" alt="">
+                <img class="img-ventor" src="https://images.pexels.com/photos/29401471/pexels-photo-29401471/free-photo-of-cozy-vintage-cafe-corner-with-artistic-flair.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="">
+            </div>
+
+            <div class="item11" alt="">
+                <img class="img-ventor" src="https://images.pexels.com/photos/29401471/pexels-photo-29401471/free-photo-of-cozy-vintage-cafe-corner-with-artistic-flair.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="">
+            </div>
+
+            <div class="item12" alt="">
+                <img class="img-ventor" src="https://images.pexels.com/photos/29401471/pexels-photo-29401471/free-photo-of-cozy-vintage-cafe-corner-with-artistic-flair.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="">
+            </div>
+
+            <div class="item13" alt="">
+                <h3>Feliz dia </h3>
+            </div>
+
+            <div class="item14" alt="">
+                <h3>programador</h3>
+            </div>
+
+            <div class="item15" alt="">
+                <h4> 3 </h4>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- pie de pagina -->
+    </footer>
+</body>
+
+</html>
